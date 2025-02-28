@@ -1,0 +1,80 @@
+body {
+    background-color: #252525;
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, sans-serif;
+  }
+
+  /*.header {
+    text-align: center;
+    background: #495C42;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 15px;
+    border-radius: 1px;
+  }*/
+
+.navbar {
+    margin: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: #495C42;
+    list-style: none outside none;
+    padding: 0px 32px;
+}
+
+.navbar > ul{
+    padding: 0px 0px;
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar > ul2{
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+.navbar a{
+    float:left;
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+    display: block;
+    text-align: left;
+}
+
+/*this will add the underline when hovered over*/
+.navbar > ul a:after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: white;
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: -3px;
+    opacity: 0;
+}
+.navbar > ul a:hover:after{
+    opacity: 1;
+}
+
+
+p {
+    color: white;
+}
