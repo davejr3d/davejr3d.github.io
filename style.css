@@ -1,8 +1,10 @@
 body {
+    z-index: -1;
     background-color: #252525;
     margin: 0px;
     padding: 0px;
     font-family: Verdana, sans-serif;
+    
   }
 
   /*.header {
@@ -16,22 +18,30 @@ body {
     border-radius: 1px;
   }*/
 
+
+    /*DESKTOP NAVBAR*/
+  @media only screen and (min-width: 800px) {
+  body {
 .navbar {
+    z-index: 999;
     margin: 0;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     overflow: hidden;
     text-align: center;
     background-color: #495C42;
     list-style: none outside none;
-    padding: 0px 32px;
+    padding: 0px 0px;
+    
 }
 
-.navbar > ul{
-    padding: 0px 0px;
+
+.navbar > ul{  
+    padding: 0px 32px;
     display:flex;
     list-style-type: none;
     justify-content: space-between;
@@ -45,18 +55,26 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 25px;
+
 }
 
 
 
 .navbar a{
+    font-weight: normal;
     float:left;
     color: white;
     text-decoration: none;
-    padding: 2px;
+    padding: 8px 32px;
     display: block;
     text-align: left;
+
+    
 }
+
+.navbar a.icon {
+    display: none;
+  }
 
 /*this will add the underline when hovered over*/
 .navbar > ul a:after{
@@ -73,6 +91,57 @@ body {
 .navbar > ul a:hover:after{
     opacity: 1;
 }
+}
+  }
+
+
+    /*MOBILE NAVBAR*/
+@media only screen and (max-width: 800px) {
+    body {
+
+        .navbar {
+            overflow: hidden;
+            background-color: #495C42;
+            position: relative;
+            color: white;
+            list-style-type:none;
+            text-decoration: none;
+          }
+
+
+        .navbar  ul{
+            list-style-type:none;
+            text-decoration: none;
+        }
+        .navbar  a{
+            font-weight: normal;
+            color: white;
+            padding: 15px 32px;
+            font-size: 28px;
+            display: block;
+            list-style-type:none;
+            text-decoration: none;
+          }
+
+          .navbar #myLinks {
+            display: none;
+            
+          }
+
+
+          .navbar a.icon {
+            background: black;
+            display: block;
+            height: 100%;
+            width: 5%;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+
+    }
+}
+
 
 
 p {
